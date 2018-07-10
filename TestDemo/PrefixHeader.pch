@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  TestDemo
+//
+//  Created by wyf on 2017/3/17.
+//  Copyright © 2017年 admin. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define WeiChatKey @"wx32aaa8de0c3fd73f"
+#define WeiChatSecretKey @"2da5ad24d394aa54d2b08af67747161f"
+//微信支付 未用到
+#define WeiChatPayAccount @"1267324101" //微信支付账户号
+#define WeiChatPayPackage @"Sign=WXPay"
+#define WeiChatPayAccountKey @"7l4vhb8juz9sg0783dsb84yt29r5c79q" //微信支付商户API密钥
+
+
+#endif /* PrefixHeader_pch */

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "FirstViewController.h"
 @interface ViewController ()
 
 @end
@@ -16,9 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.navigationController.navigationBar.barTintColor = [UIColor greenColor];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"左边" style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonPress:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"右边" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonPress:)];
+
+    
+    
+}
+- (void)leftBarButtonPress:(UIBarButtonItem *)buttonItem {
+    int a;
+    NSLog(@"%d", a = 2);
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"app-Prefs:root"]];
 }
 
+- (void)rightBarButtonPress:(UIBarButtonItem *)buttonItem {
+    FirstViewController *firstVC = [FirstViewController new];
+    [self.navigationController pushViewController:firstVC animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

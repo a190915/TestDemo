@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui"/>
+    <title>上品家族</title>
+    <!--<meta name="keywords" content="Mob,ShareREC" >-->
+    <!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏。 -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- 当启动webapp功能时，显示手机信号、时间、电池的顶部导航栏的颜色。默认值为default（白色），可以定为black（黑 色）和black-translucent（灰色半透明）。这个主要是根据实际的页面设计的主体色为搭配来进行设置。 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+     <!-- 忽略页面中的数字识别为电话号码 -->
+     <meta name="format-detection" content="telephone=no,email=no"/>
+     <!-- 启用360浏览器的极速模式(webkit) -->
+     <meta name="renderer" content="webkit"/>
+     <!-- 避免IE使用兼容模式 -->
+     <meta http-eauiv="X-UA-Compatible"
+     content="IE=edge"/>
+     <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+     <meta name="HandheldFriendly" content="true"/>
+     <!-- 微软的老式浏览器 -->
+     <meta name="MobileOptimized" content="320"/>
+     <!-- uc强制竖屏 -->
+     <meta name="screen-orientation" content="portrait"/>
+     <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+<style>
+/*-------------重置样式---------------*/
+
+html {font-family:"微软雅黑",Helvetica, STHeiTi, Arial, sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-size:625%;}
+body { margin: 0; font-size: 0.14rem; line-height: 1.5; color: #666; background-color: white; height: 100%; overflow-x: hidden; -webkit-overflow-scrolling: touch; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+audio, canvas, progress, video { display: inline-block; vertical-align: baseline; }
+audio:not([controls]) { display: none; height: 0; }
+[hidden], template { display: none; }
+svg:not(:root) { overflow: hidden; }
+
+a { background: transparent; text-decoration: none; -webkit-tap-highlight-color: transparent; color: #888; }
+a:active { outline:0; }
+/*a:active { color: #c74f43; }*/
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+dfn { font-style: italic; }
+mark { background: #ff0; color: #000;}
+small { font-size: 80%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+img { border: 0; vertical-align: middle; }
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+pre { overflow: auto; white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+
+button, input, optgroup, select, textarea { color: inherit; font: inherit; margin: 0; }
+button { overflow: visible; }
+button, select { text-transform: none; }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
+button[disabled], html input[disabled] { cursor: default; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+input { line-height: normal; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+legend { border: 0; padding: 0; }
+textarea { overflow: auto; resize: vertical; }
+optgroup { font-weight: bold; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td, th { padding: 0; }
+
+html, button, input, select, textarea { font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif; }
+h1, h2, h3, h4, h5, h6, p, figure, form, blockquote { margin: 0; }
+ul, ol, li, dl, dd { margin: 0; padding: 0; }
+ul, ol { list-style: none outside none; }
+h1, h2, h3,h4,h6,p { font-weight: normal; }
+h1 { font-size: 0.18rem;}
+h2 { font-size: 0.16rem;}
+h3 { font-size: 0.14rem;}
+h1,h2,h3,h4,h6,p{
+text-align:justify;
+}
+input::-moz-placeholder, textarea::-moz-placeholder { color: #cccccc; }
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #cccccc; }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #cccccc; }
+
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+/*清除浮动*/
+.clearfix:after{
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+.clearfix:after{
+    zoom:1;
+}
+/*-----------------文章内容样式----------------*/
+.guide{
+  width:7.5rem;
+  overflow:hidden;
+}
+.guide .guide-cont{
+  text-align:center;
+}
+.star {  
+    display: block;  
+    width: 0px;  
+    height: 0px;  
+    border-radius: 50%; 
+    background: #FFF;  
+    top: -10px;  
+    left: 3rem;  
+    position: relative;  
+    /*box-shadow: 0 0 1px 1px rgba(255, 255, 255, .3);*/
+    -webkit-animation: star-ani 4s ease-out infinite;
+    -moz-animation: star-ani 4s ease-out infinite;
+    -o-animation: star-ani 4s ease-out infinite;
+    animation: star-ani 4s ease-out infinite; 
+
+
+} 
+.star:after {  
+    content: '';  
+    display: block;  
+    top: -1px;  
+    left: 1px;  
+    border: 0px solid #fff;  
+    border-width: 1px 2rem 1px 2rem;  
+    border-color: transparent transparent transparent rgba(255, 255, 255, .5);  
+    transform: rotate(-45deg) translate3d(1px, 3px, 0);  
+    transform-origin: 0% 0%; 
+   
+
+}  
+.star1{
+    background: #f69686; 
+    left: 4rem;  
+    /* box-shadow: 0 0 2px 2px rgba(246, 150, 134, .3); */
+     -webkit-animation: star-ani 4s ease-out infinite 1s;
+    -moz-animation: star-ani 4s ease-out infinite 1s;
+    -o-animation: star-ani 4s ease-out infinite 1s;
+    animation: star-ani 4s ease-out infinite 1s; 
+}
+.star1:after{
+
+    border: 0px solid #f69686; 
+    border-width: 1px 2rem 1px 2rem;  
+    border-color: transparent transparent transparent rgba(246, 150, 134, .5);   
+}
+.star2{
+    background: #8c6efc; 
+    left: 4.4rem;  
+    /* box-shadow: 0 0 2px 2px rgba(246, 150, 134, .3); */
+     -webkit-animation: star-ani 4s ease-out infinite 2s;
+    -moz-animation: star-ani 4s ease-out infinite 2s;
+    -o-animation: star-ani 4s ease-out infinite 2s;
+    animation: star-ani 4s ease-out infinite 2s; 
+}
+.star2:after{
+
+    border: 0px solid #f69686; 
+    border-width: 1px 2rem 1px 2rem;  
+    border-color: transparent transparent transparent rgba(140, 110, 152, .5);   
+}
+.star3{
+    background: #8c6efc; 
+    left: 5rem;  
+    /* box-shadow: 0 0 2px 2px rgba(246, 150, 134, .3); */
+     -webkit-animation: star-ani 4s ease-out infinite 2.4s;
+    -moz-animation: star-ani 4s ease-out infinite 2.4s;
+    -o-animation: star-ani 4s ease-out infinite 2.4s;
+    animation: star-ani 4s ease-out infinite 2.4s; 
+}
+.star3:after{
+
+    border: 0px solid #fafc6e; 
+    border-width: 1px 2rem 1px 2rem;  
+    border-color: transparent transparent transparent rgba(250, 252, 110, .5);   
+}
+.star4{
+    background: #fb667b; 
+    left: 5.6rem;  
+    /* box-shadow: 0 0 2px 2px rgba(246, 150, 134, .3); */
+     -webkit-animation: star-ani 4s ease-out infinite 2.6s;
+    -moz-animation: star-ani 4s ease-out infinite 2.6s;
+    -o-animation: star-ani 4s ease-out infinite 2.6s;
+    animation: star-ani 4s ease-out infinite 2.6s; 
+}
+.star4:after{
+
+    border: 0px solid #fafc6e; 
+    border-width: 1px 2rem 1px 2rem;  
+    border-color: transparent transparent transparent rgba(251, 102, 103, .5);   
+}
+.star5{
+    background: #fb9b66; 
+    left: 6.4rem;  
+    /* box-shadow: 0 0 2px 2px rgba(246, 150, 134, .3); */
+     -webkit-animation: star-ani 2s ease-out infinite 3s;
+    -moz-animation: star-ani 2s ease-out infinite 3s;
+    -o-animation: star-ani 2s ease-out infinite 3s;
+    animation: star-ani 2s ease-out infinite 3s; 
+}
+.star5:after{
+
+    border: 0px solid #fafc6e; 
+    border-width: 1px 2rem 1px 2rem;  
+    border-color: transparent transparent transparent rgba(251, 255, 102, .5);   
+}
+.star6{
+    background: #ffe73f; 
+    left: 7rem;  
+    /* box-shadow: 0 0 2px 2px rgba(246, 150, 134, .3); */
+     -webkit-animation: star-ani 2s ease-out infinite 2.2s;
+    -moz-animation: star-ani 2s ease-out infinite 2.2s;
+    -o-animation: star-ani 2s ease-out infinite 2.2s;
+    animation: star-ani 2s ease-out infinite 2.2s; 
+}
+.star6:after{
+
+    border: 0px solid #fafc6e; 
+    border-width: 0.3px 2rem 0.3px 2rem;  
+    border-color: transparent transparent transparent rgba(255, 231, 63, .5);   
+}
+.star7{
+    background: #5cfc42; 
+    left: 8rem;  
+    /* box-shadow: 0 0 2px 2px rgba(246, 150, 134, .3); */
+     -webkit-animation: star-ani 2s ease-out infinite 2.8s;
+    -moz-animation: star-ani 2s ease-out infinite 2.8s;
+    -o-animation: star-ani 2s ease-out infinite 2.8s;
+    animation: star-ani 2s ease-out infinite 2.8s; 
+}
+.star7:after{
+
+    border: 0px solid #fff; 
+    border-width: 0.2px 2rem 0.2px 2rem;  
+    border-color: transparent transparent transparent rgba(92, 252, 66, .5);   
+}
+.star8{
+    background: #42fced; 
+    left: 9rem;  
+    /* box-shadow: 0 0 2px 2px rgba(246, 150, 134, .3); */
+     -webkit-animation: star-ani 2s ease-out infinite 3s;
+    -moz-animation: star-ani 2s ease-out infinite 3s;
+    -o-animation: star-ani 2s ease-out infinite 3s;
+    animation: star-ani 2s ease-out infinite 3s; 
+}
+.star8:after{
+
+    border: 0px solid #fff; 
+    border-width: 0.2px 2rem 0.2px 2rem;  
+    border-color: transparent transparent transparent rgba(66, 252, 237, .5);   
+}
+.star9{
+    background: #cc73ff; 
+    left: 6.2rem;  
+    /* box-shadow: 0 0 2px 2px rgba(246, 150, 134, .3); */
+     -webkit-animation: star-ani 4s ease-out infinite 3s;
+    -moz-animation: star-ani 4s ease-out infinite 3s;
+    -o-animation: star-ani 4s ease-out infinite 3s;
+    animation: star-ani 4s ease-out infinite 3s; 
+}
+.star9:after{
+
+    border: 0px solid #fff; 
+    border-width: 0.2px 2rem 0.2px 2rem;  
+    border-color: transparent transparent transparent rgba(204, 115, 255, .5);   
+}
+.star10{
+    background: #e4b6fe; 
+    left: 10rem;  
+    /* box-shadow: 0 0 2px 2px rgba(246, 150, 134, .3); */
+     -webkit-animation: star-ani 2s ease-out infinite 3s;
+    -moz-animation: star-ani 2s ease-out infinite 3s;
+    -o-animation: star-ani 2s ease-out infinite 3s;
+    animation: star-ani 2s ease-out infinite 3s; 
+}
+.star10:after{
+
+    border: 0px solid #fff; 
+    border-width: 0.2px 2rem 0.2px 2rem;  
+    border-color: transparent transparent transparent rgba(228, 182, 254, .5);   
+}
+.star11{
+    background: #e4b6fe; 
+    left: 12rem;  
+    /* box-shadow: 0 0 2px 2px rgba(246, 150, 134, .3); */
+     -webkit-animation: star-ani 2s ease-out infinite 3s;
+    -moz-animation: star-ani 2s ease-out infinite 3s;
+    -o-animation: star-ani 2s ease-out infinite 3s;
+    animation: star-ani 2s ease-out infinite 3s; 
+}
+.star11:after{
+
+    border: 0px solid #fff; 
+    border-width: 0.2px 2rem 0.2px 2rem;  
+    border-color: transparent transparent transparent rgba(228, 182, 254, .5);   
+}
+
+ @keyframes star-ani {  
+    0% {  
+        opacity: 0;  
+        transform: scale(0) rotate(0) translate3d(0, 0, 0);  
+    }  
+    50% {  
+        opacity: 1;  
+        transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);  
+    }  
+    100% {  
+        opacity: 0;  
+        transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);  
+    }  
+}
+.banner{
+  position:relative;
+  height:6.2rem;
+  background:url(images/hong1.jpg)no-repeat left top;
+  background-size:7.5rem 6.16rem;
+  margin-bottom:0.4rem;
+}   
+.guide-cont .banner .img1{
+  width:7.2rem;
+  padding-top:1.4rem;
+}
+.guide-cont .banner .img2{
+  width:3rem;
+  position:absolute;
+  top:0.5rem;
+  left:0.33rem;
+   transition:all 4s;
+    -webkit-transition:all 4s;
+    -moz-transition:all 4s;
+    -o-transition:all 4s;
+    -webkit-animation: mymove 5s linear infinite;
+    -moz-animation: mymove 5s linear infinite;
+    -o-animation: mymove 5s linear infinite;
+    animation: mymove 5s linear infinite;
+}
+.guide-cont .banner .img3{
+  width:1rem;
+  position:absolute;
+  top:1rem;
+  left:4rem;
+   transition:all 4s;
+    -webkit-transition:all 4s;
+    -moz-transition:all 4s;
+    -o-transition:all 4s;
+    -webkit-animation: mymove2 5s linear infinite;
+    -moz-animation: mymove2 5s linear infinite;
+    -o-animation: mymove2 5s linear infinite;
+    animation: mymove2 5s linear infinite;
+}
+.guide-cont .banner .img4{
+  width:0.6rem;
+  position:absolute;
+  bottom:3rem;
+  right:0.5rem;
+  transition:all 4s;
+  -webkit-transition:all 4s;
+  -moz-transition:all 4s;
+  -o-transition:all 4s;
+  -webkit-animation: mymove3 3s linear infinite;
+  -moz-animation: mymove3 3s linear infinite;
+  -o-animation: mymove3 3s linear infinite;
+  animation: mymove3 3s linear infinite;
+}
+.guide-cont .banner .img5{
+  width:0.8rem;
+  position:absolute;
+  top:1.8rem;
+  left:0.36rem;
+}
+.guide-cont .banner .img6{
+  width:0.6rem;
+  position:absolute;
+  top:1.7rem;
+  left:3rem;
+}
+.guide-cont .banner .img7{
+  width:0.6rem;
+  position:absolute;
+  top:-0.2rem;
+  left:3.6rem;
+   transition:all 2s;
+    -webkit-transition:all 2s;
+    -moz-transition:all 2s;
+    -o-transition:all 2s;
+    -webkit-animation: mymove4 2s linear infinite;
+    -moz-animation: mymove4 2s linear infinite;
+    -o-animation: mymove4 2s linear infinite;
+    animation: mymove4 2s linear infinite;
+}
+.guide-cont .banner .img8{
+  width:0.4rem;
+  position:absolute;
+  top:1.7rem;
+  left:4.8rem;
+}
+.guide-cont .banner .img9{
+  width:0.5rem;
+  position:absolute;
+  top:-0.8rem;
+  left:5.1rem;
+  transition:all 2s;
+  -webkit-transition:all 2s;
+  -moz-transition:all 2s;
+  -o-transition:all 2s;
+  -webkit-animation: mymove4 2s ease infinite 1s;
+  -moz-animation: mymove4 2s ease infinite 1s;
+  -o-animation: mymove4 2s ease infinite 1s;
+  animation: mymove4 2s ease infinite 1s;
+}
+.guide-cont .banner img.img-ra{
+     transition:all 4s;
+    -webkit-transition:all 4s;
+    -moz-transition:all 4s;
+    -o-transition:all 4s;
+    -webkit-animation: rotate 5s linear infinite;
+    -moz-animation: rotate 5s linear infinite;
+    -o-animation: rotate 5s linear infinite;
+    animation: rotate 5s linear infinite;
+}
+@-webkit-keyframes rotate{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(360deg)}}
+ @-moz-keyframes rotate{from{-moz-transform:rotate(0deg)}to{-moz-transform:rotate(359deg)}}
+ @-o-keyframes rotate{from{-o-transform:rotate(0deg)}to{-o-transform:rotate(359deg)}}
+ @keyframes rotate{from{transform:rotate(0deg)}to{transform:rotate(359deg)}}
+
+@-webkit-keyframes mymove{from{left:0.6rem}to{left:1.4rem}}
+@-moz-keyframes mymove{from{left:0.6rem}to{left:1.4rem}}
+@-o-keyframes mymove{from{left:0.6rem}to{left:1.4rem}}
+@keyframes mymove{from{left:0.6rem}to{left:1.4rem}}
+
+@-webkit-keyframes mymove2{from{top:0.6rem}to{top:1.2rem}}
+@-moz-keyframes mymove2{from{top:0.6rem}to{top:1.2rem}}
+@-o-keyframes mymove2{from{top:0.6rem}to{top:1.2rem}}
+@keyframes mymove2{from{top:0.6rem}to{top:1.2rem}}
+
+@-webkit-keyframes mymove4{from{top:0}to{top:1.4rem}}
+@-moz-keyframes mymove4{from{top:0}to{top:1.4rem}}
+@-o-keyframes mymove4{from{top:0}to{top:1.4rem}}
+@keyframes mymove4{from{top:0}to{top:1.4rem}}
+
+@-webkit-keyframes mymove3{from{bottom:2rem}to{bottom:2.4rem}}
+@-moz-keyframes mymove3{from{bottom:2rem}to{bottom:2.4rem}}
+@-o-keyframes mymove3{from{bottom:2rem}to{bottom:2.4rem}}
+@keyframes mymove3{from{bottom:2rem}to{bottom:2.4rem}}
+.detail{
+  width:7.5rem;
+  overflow:hidden;
+
+}
+.detail-cont{
+  margin:0 0.3rem;
+  padding-top:3px;
+
+
+}
+.detail h4{
+  font-size:0.36rem;
+  color:#d9332d;
+  font-weight:bold;
+  margin-bottom:0.2rem;
+  margin-left:0.3rem;
+}
+.detail p{
+  font-size:0.32rem;
+  margin:0 0.3rem;
+  color:#474747;
+  line-height:0.6rem;
+}
+.detail p span {
+  color:#fc7009;
+  }
+  .detail .cont{
+    width:6.6rem;
+    overflow:hidden;
+    border:1px dashed #ccc;
+    border-radius:8px;
+    padding:0.3rem;
+    margin:0 auto;
+    margin-bottom:0.8rem;
+    box-shadow:0 -1px 2px #b3d2fd;
+
+  }
+  .detail .cont1 img{
+      width:5.6rem;
+      padding-top:0.4rem;
+  }
+  .detail .cont2{
+      position:relative;
+  }
+  .detail .cont2 img.img11{
+    width:6rem;
+    padding-top:0.4rem;
+  }
+  .detail .cont2 img.img12-1 , .detail .cont2 img.img12-2{
+    position: absolute;
+    width:0.2rem;
+  }
+  .detail .cont2 img.img12-1{
+    bottom:0.7rem;
+    left:2.1rem;
+  }
+  .detail .cont2 img.img12-2{
+    bottom:0.7rem;
+    right:2rem;
+  }
+  .detail .cont3 img{
+    padding-top:0.5rem;
+    width:4.6rem;
+  }
+  .cont4 p{
+    margin-bottom:0.4rem;
+  }
+  .cont4 img{
+    width:3rem;
+    border:1px dashed #ccc;
+    padding:0.1rem;
+  }
+  .bot-img{
+    width:7.5rem;
+
+  }
+</style>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script>
+        (function () {
+        var b = document.documentElement,
+        a = function () {
+            var a = b.getBoundingClientRect().width;
+            b.style.fontSize = (100/750) * (750 <= a ? 750 : a) + "px"
+        }, c = null;
+        window.addEventListener("resize", function () {
+            clearTimeout(c);
+            c = setTimeout(a, 300)
+        });
+        a()
+    })();
+
+    </script>
+</head>
+<body>
+<!-- 文章内容开始 -->
+<div class="guide">
+  
+  <div class="guide-cont">
+     
+    <div class="banner">
+      <span class="star star0"></span>
+      <span class="star star1"></span>
+      <span class="star star2"></span>
+      <span class="star star3"></span>
+      <span class="star star4"></span>
+      <span class="star star5"></span>
+      <span class="star star6"></span>
+      <span class="star star7"></span>
+      <span class="star star8"></span> 
+      <span class="star star9"></span>
+      <span class="star star10"></span>
+     
+      <img class="img1" src="images/hong2.png" alt="">
+      <img class="img2" src="images/hong3.png" alt="">
+      <img class="img3" src="images/hong4.png" alt="">
+      <img class="img4" src="images/hong5.png" alt="">
+      <img class="img5 img-ra" src="images/hong6.png" alt="">
+      <img class="img6 img-ra" src="images/hong7.png" alt="">
+      <img class="img7 img-mo" src="images/hong8.png" alt="">
+      <img class="img8 img-ra" src="images/hong9.png" alt="">
+      <img class="img9 img-mo" src="images/hong10.png" alt="">
+    </div>
+    <div class="detail">
+      <div class="detail-cont">
+
+      <span class="star star0"></span>
+      <span class="star star1"></span>
+      <span class="star star2"></span>
+      <span class="star star3"></span>
+     
+      <span class="star star5"></span>
+      <span class="star star6"></span>
+    
+      <span class="star star8"></span> 
+    
+      <span class="star star10"></span>
+      <span class="star star11"></span>
+
+        <div class="cont cont1">
+          <h4>Q：天降红包是干什么的？</h4>
+          <p>A：天降红包是家族社交软件【上品家族】的内置应用，每天<span>中午12点</span>和<span>晚上8点</span>，上品家族向在网用户派发红包，先抢先得。</p> 
+          <img class="hong14" src="images/hong14.jpg" alt="">
+        </div>
+        <div class="cont cont2">
+        <span class="star star0"></span>
+      <span class="star star1"></span>
+      <span class="star star2"></span>
+      <span class="star star3"></span>
+
+      <span class="star star5"></span>
+      <span class="star star6"></span>
+  
+      <span class="star star8"></span> 
+   
+      <span class="star star10"></span>
+      <span class="star star11"></span>
+
+          <h4>Q：听着好有趣！那怎么使用呢？</h4>
+          <p>A：只要下载上品家族app，就开享受每天抢红包的乐趣。</p> 
+          <p>1：扫码，或者去手机应用市场搜索“上品家族”，下载安装。</p>
+          <p>2：注册新用户，完善个人信息。</p>
+          <p>3：每天中午和晚上8点参加抢红包。</p>
+          <img class="img11" src="images/hong11.jpg" alt="">
+          <img class="img12-1" src="images/hong12.jpg" alt="">
+          <img class="img12-2" src="images/hong12.jpg" alt="">
+        </div>
+        <div class="cont cont3">
+        <span class="star star0"></span>
+      <span class="star star1"></span>
+      <span class="star star2"></span>
+      <span class="star star3"></span>
+      <span class="star star4"></span>
+      <span class="star star5"></span>
+      <span class="star star6"></span>
+
+      <span class="star star8"></span> 
+
+      <span class="star star10"></span>
+      <span class="star star11"></span>
+
+          <h4>Q：忘记参加怎么办？</h4> 
+          <p>A：这个您不用担心，只要您手机开机，且未停机，
+          活动开始的前3分钟，会收到短信通知点击链接即可！
+          即使是忘记参加也没关系，这个活动常年都有。</p>
+          <img src="images/hong15.jpg" alt="">
+        </div>
+        <div class="cont cont4">
+        <span class="star star0"></span>
+      <span class="star star1"></span>
+      <span class="star star2"></span>
+      <span class="star star3"></span>
+      <span class="star star4"></span>
+      <span class="star star5"></span>
+      <span class="star star6"></span>
+     
+      <span class="star star8"></span> 
+     
+      <span class="star star10"></span>
+      <span class="star star11"></span>
+
+          <h4>Q：挺不错的样子，我在那里下载？</h4>
+          <p>A：扫码，或者去手机应用市场搜索“上品家族”，下载安装，开启上品家族抢红包新方式。</p>
+          <img src="images/hong13.jpg" alt="">
+          
+        </div>
+        
+        
+        <p></p>
+      </div>
+    </div>
+  </div> 
+  <img class="bot-img" src="images/hong17.jpg" alt=""> 
+</div>
+    
+<!-- 文章内容结束 -->
+</body>
+</html>
